@@ -15,16 +15,19 @@ class PostController < Sinatra::Base
     erb :'posts/index'
   end
 
+
+  get '/new' do
+    @books = Books.new
+    erb :'posts/new'
+  end
+
   get "/:id_from_books" do
     id = params[:id_from_books].to_i
     @books = Books.find id
     erb :'posts/show'
   end
 
-  get '/new' do
-    @books = Books.new
-    erb :'posts/new'
-  end
+
 
   get "/:id_from_url/edit" do
     id = params[:id_from_url].to_i
@@ -45,7 +48,7 @@ class PostController < Sinatra::Base
 
   # When you press save in new book section
     post "/" do
-      post = Books.new
+      books = Books.new
       books.title = params[:title]
       books.author = params[:author]
       books.description = params[:description]
@@ -58,14 +61,5 @@ class PostController < Sinatra::Base
       Books.destroy id
       redirect '/'
     end
-
-
-
-
-
-
-
-
-
 
 end
