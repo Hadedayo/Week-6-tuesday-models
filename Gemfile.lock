@@ -40,6 +40,7 @@ PLATFORMS
 
 DEPENDENCIES
   pg
+  rack
   sinatra
   sinatra-contrib
 
