@@ -1,0 +1,9 @@
+<h1>Hi there!</h1>
+<p>I've got some great recommendations of books to read. Below are some of them.</p>
+<% @myBooks.each do |bookLists| %>
+  <div>
+    <h2><a href="/<%= bookLists.id%>"><%= bookLists.title %></a></h2>
+    <h3><%= bookLists.author %></h3>
+    <p><%= bookLists.description %></p>
+  </div>
+<% end %>

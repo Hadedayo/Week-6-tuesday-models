@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%# To create anv bar on this page %>
+    <%= erb(:'partials/navigation', :layout => false) %>
+
+    <%# template content will be injected here %>
+    <%= yield%>
+
+  </body>
+</html>
+
+<%# the layout.erb creates the content for each page  %>

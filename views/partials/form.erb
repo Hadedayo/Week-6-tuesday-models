@@ -1,0 +1,27 @@
+<form action="/<%= @books.id%>"  method="post">
+  <div class="">
+    <label>Title:</label>
+    <input type="text" value="<%= @books.title%>"  name="title" placeholder="Enter new title">
+  </div>
+
+  <div class="">
+    <label>Author:</label>
+    <input type="text" value="<%= @books.author%>"  name="title" placeholder="Enter new author">
+  </div>
+
+  <div class="">
+    <label>Description:</label>
+    <textarea
+      name="description" rows="8" cols="80" placeholder="Enter new description">
+      <%= @books.description%>
+    </textarea>
+  </div>
+
+  <div class="">
+    <% if (@books.id != nil) %>
+    <input type="hidden" name="_method" value="PUT">
+    <% end %>
+    <input type="submit" value="Save post">
+  </div>
+
+</form>

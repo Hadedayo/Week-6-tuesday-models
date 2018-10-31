@@ -1,0 +1,8 @@
+<h1>Edit Book Info</h1>
+<%= erb(:"partials/form", :layout => false)%>
+
+<%# The value for method in the form tag can only be GET or POST, so we overwrite it here with delete %>
+<form  action="/<%= @books.id%>" method="post">
+  <input type="submit"  value="Delete post">
+  <input type="hidden" name="_method" value="DELETE">
+</form>
