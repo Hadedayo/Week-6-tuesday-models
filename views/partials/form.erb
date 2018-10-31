@@ -1,20 +1,20 @@
 <form action="/<%= @books.id%>"  method="post">
   <div class="">
-    <label>Title:</label>
-    <input type="text" value="<%= @books.title%>"  name="title" placeholder="Enter new title">
+    <div><label>Title:</label></div>
+    <div><input type="text" value="<%= @books.title%>"  name="title" placeholder="Enter new title"></div>
   </div>
 
   <div class="">
-    <label>Author:</label>
-    <input type="text" value="<%= @books.author%>"  name="title" placeholder="Enter new author">
+    <div><label>Author:</label></div>
+    <div><input type="text" value="<%= @books.author%>"  name="author" placeholder="Enter new author"></div>
   </div>
 
   <div class="">
-    <label>Description:</label>
-    <textarea
+    <div><label>Description:</label></div>
+    <div><textarea
       name="description" rows="8" cols="80" placeholder="Enter new description">
       <%= @books.description%>
-    </textarea>
+    </textarea></div>
   </div>
 
   <div class="">
